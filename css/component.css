@@ -189,7 +189,7 @@ input:focus::-moz-placeholder {
 	color: rgba(255,255,255,0.2);
 }
 
-input:-ms-input-placeholder {  
+input:-ms-input-placeholder {
 	color: rgba(255,255,255,0.8);
 }
 
@@ -222,12 +222,13 @@ input:focus::-ms-input-placeholder {
 	text-transform: uppercase;
 	cursor: pointer;
 	position: relative;
-	background: #76C3BD;
+	background: orangered;
 	color: #fff;
 	padding: 0 1em 0 0;
 	font-size: 40%;
 	font-weight: bold;
 	letter-spacing: 3px;
+	float: right;
 }
 
 .nl-submit:before {
@@ -236,7 +237,7 @@ input:focus::-ms-input-placeholder {
 	float: left;
 	padding: 0 0.7em;
 	margin: 0 0.8em 0 0;
-	background: #69B1A9;
+	background: orangered;
 }
 
 .no-touch .nl-form .nl-submit:hover,
@@ -274,12 +275,18 @@ input:focus::-ms-input-placeholder {
 
 @media screen and (max-width: 45em) {
 	.nl-form {
-		font-size: 3em;
+		font-size: 2em;
 	}
+	
+	.nl-form .nl-submit {
+		width: 100%;
+	}
+	
+	
 }
 
 @media screen and (max-width: 25em) {
 	.nl-form {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 }
