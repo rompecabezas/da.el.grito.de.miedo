@@ -24,7 +24,7 @@
 				<h1>Da el grito con creepypastas <span>y podrás ganarte un pase doble al cine</span></h1>
 			</header>
 			<div class="main clearfix">
-				<form id="nl-form" class="nl-form" ng-controller="nlform-controller">
+				<form id="nl-form" class="nl-form" ng-app="grita-con-creepypastas" ng-controller="nlform-controller">
 					Soy <input type="text" value="" placeholder="fan de Rompecabezas" data-subline="Escribe tu nombre, ejemplos: <em>Adriana Tuerto</em>, <em>Carlos Degollado</em>"/>.
 							<br /><br />
 							En <a target="_blank" href="http://rompecabezas.mie.do/">el blog de Rompecabezas</a> descubrí que vive en
@@ -50,6 +50,7 @@
 						<span class="nl-submit" ng-click='send()'>¡Enviar!</span>
 					</div>
 					<div class="nl-overlay"></div>
+					{{form}}
 				</form>
 			</div>
 		</div><!-- /container -->
