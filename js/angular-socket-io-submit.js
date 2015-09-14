@@ -34,6 +34,9 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
   $scope.form = {};
   $scope.form.user = {};
 
+	$scope.game = {};
+
+
   socket.on('connect', function() {
       var event = {
           body: "User arrives"
@@ -43,6 +46,12 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 
   socket.on('user::arrives', function(data) {
     console.log(data);
+		$scope.game.peopleOnline = data.peopleOnline;
+  });
+
+	socket.on('user::left', function(data) {
+    console.log(data);
+		$scope.game.peopleOnline = data.peopleOnline;
   });
 
   socket.on('user::responses', function(data) {
