@@ -46,4 +46,6 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
     alert(':D');
   }
 
+  console.log('angular working');
+
 }]);
