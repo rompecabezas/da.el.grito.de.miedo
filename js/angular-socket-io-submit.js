@@ -1,3 +1,6 @@
+var aria = angular.module('grita-con-creepypastas', [
+	'btford.socket-io'
+]);;
 angular.module('grita-con-creepypastas').factory('socket',['$rootScope', function ($rootScope) {
   var socket = io.connect('http://199.89.53.200:9129', {
       'reconnection delay': 2000,
