@@ -25,10 +25,10 @@
 			</header>
 			<div class="main clearfix">
 				<form id="nl-form" class="nl-form" ng-app="grita-con-creepypastas" ng-controller="nlform-controller">
-					Soy <input type="text" value="" placeholder="fan de Rompecabezas" data-subline="Escribe tu nombre, ejemplos: <em>Adriana Tuerto</em>, <em>Carlos Degollado</em>"/>.
+					Soy <input ng-model="form.user.name" type="text" value="" placeholder="fan de Rompecabezas" data-subline="Escribe tu nombre, ejemplos: <em>Adriana Tuerto</em>, <em>Carlos Degollado</em>"/>.
 							<br /><br />
 							En <a target="_blank" href="http://rompecabezas.mie.do/">el blog de Rompecabezas</a> descubrí que vive en
-					<select>
+					<select ng-model="form.rcplace">
 						<option value="nc" selected>nuestros corazones</option>
 						<option value="fl">Finlanda</option>
 						<option value="df">México DF</option>
@@ -39,10 +39,10 @@
 					Este 16 voy a dar un grito de miedo.
 					<br /><br />
 					Si gano los boletos para el cine quiero que me los manden a
-							<input type="text" value="" placeholder="adriana.tuerto@outlook.com" data-subline="Escribe tu email, ejemplos: <em>adriana.tuerto@outlook.com</em> <em>carlos.degollado@outlook.com</em>"/>
+							<input ng-model="form.user.email" type="text" value="" placeholder="adriana.tuerto@outlook.com" data-subline="Escribe tu email, ejemplos: <em>adriana.tuerto@outlook.com</em> <em>carlos.degollado@outlook.com</em>"/>
 							<br /><br />
 							Confieso que el cine y las creepypastas
-					<select>
+					<select ng-model="form.user.likesCreepypastas" ng-init="form.user.likesCreepypastas = 'me'">
 						<option value="me" selected>me encantan</option>
 						<option value="nm">no me gustan</option>
 					</select>.
@@ -50,7 +50,6 @@
 						<span class="nl-submit" ng-click='send()'>¡Enviar!</span>
 					</div>
 					<div class="nl-overlay"></div>
-					{{form}}
 				</form>
 			</div>
 		</div><!-- /container -->

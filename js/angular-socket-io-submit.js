@@ -1,4 +1,4 @@
-var aria = angular.module('grita-con-creepypastas', [
+var grita = angular.module('grita-con-creepypastas', [
 	'btford.socket-io'
 ]);;
 angular.module('grita-con-creepypastas').factory('socket',['$rootScope', function ($rootScope) {
@@ -30,6 +30,10 @@ angular.module('grita-con-creepypastas').factory('socket',['$rootScope', functio
 }]);
 
 angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scope', 'socket', function($scope,socket) {
+
+  $scope.form = {};
+  $scope.form.user = {};
+
   socket.on('connect', function() {
       var event = {
           body: "User arrives"
@@ -41,11 +45,13 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
     console.log(data);
   });
 
+  socket.on('user::responses', function(data) {
+    console.log(data);
+  });
 
   $scope.send = function(){
-    alert(':D');
-  }
-
-  console.log('angular working');
+    console.log($scope.form);
+    socket.emit('user::responses',$scope.form);
+  };
 
 }]);
