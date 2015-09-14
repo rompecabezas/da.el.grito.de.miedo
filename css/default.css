@@ -22,7 +22,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #ffe8e7;
-	background: #E96D65;
+	background: black;
 	font-weight: 300;
 	overflow-x: hidden;
 }
@@ -71,7 +71,7 @@ a:active {
 /* To Navigation Style */
 .codrops-top {
 	background: #fff;
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(22,22,22, 0.8);
 	text-transform: uppercase;
 	width: 100%;
 	font-size: 0.69em;
