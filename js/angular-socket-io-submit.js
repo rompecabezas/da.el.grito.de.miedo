@@ -31,13 +31,20 @@ angular.module('grita-con-creepypastas').factory('socket',['$rootScope', functio
 
 angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scope', 'socket', function($scope,socket) {
 
-  $scope.form = {};
-  $scope.form.user = {};
+  $scope.form = {
+		rplace:'',
+		user:{
+			name:'',
+			email:'',
+			likesCreepypastas:''
+		}
+	};
 
 	$scope.game = {};
 
 
   socket.on('connect', function() {
+		console.log('I\'im' + $scope.form);
       var event = {
           body: "User arrives"
       };
