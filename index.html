@@ -57,7 +57,13 @@
 							<span class="error-message"></span>
 						</div><!-- / controls -->
 					</div><!-- /simform-inner -->
-					<span class="final-message">{{game.msgforuser}}</span>
+					<div  class="final-message">
+						<span ng-if="game.msgforuser == ''" >Estamos envíando tus datos...</span>
+						<span ng-if="game.msgforuser != ''" >{{game.msgforuser}}</span>
+					</div>
+
+
+
 				</form><!-- /simform -->
 			</section>
 			<section class="related">
