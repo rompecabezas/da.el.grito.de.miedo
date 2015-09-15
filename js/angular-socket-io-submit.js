@@ -69,7 +69,7 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
   socket.on('user::responses', function(data) {
     console.log(data);
 		if(data.success == 'success'){
-			$scope.game.msgforuser = '¡Gracias por participar! Anunciaremos al ganador de los boletos el 17 de septiembre, al rededor del mediodia';
+			$scope.game.msgforuser = '¡Te deseamos mucha suerte! Anunciaremos al ganador del pase doble el 17 de septiembre, al rededor del mediodia';
 		}
 		else if( data.errorCode == 1403){
 			$scope.game.msgforuser = 'Hubo un problema con tu nombre, por favor revísalo y envía nuevamente tus datos. :)';
