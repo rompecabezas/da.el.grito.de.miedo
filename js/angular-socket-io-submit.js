@@ -42,7 +42,7 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 
 	$scope.game = {
 		msgforuser:'',
-		registredusers:27,
+		registredusers:11,
 		peopleOnline:2
 	};
 
