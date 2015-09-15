@@ -73,7 +73,7 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 			$scope.game.registredusers = data.registredusers;
 		}
 		else
-			$scope.game.msgforuser = 'Hubo un error con tu email o tu nombre, por favor revísalos y vuelve a intentar';
+			$scope.game.msgforuser = 'Por favor pon tu nombre sin espacios, ejemplo: AlexisTuertoDegollado. Corregiremos esto por la madrugada';
   });
 
   $scope.send = function(){
