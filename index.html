@@ -56,7 +56,7 @@
 							<span class="error-message"></span>
 						</div><!-- / controls -->
 					</div><!-- /simform-inner -->
-					<span class="final-message"></span>
+					<span class="final-message">{{game.final-message}}</span>
 				</form><!-- /simform -->
 			</section>
 			<section class="related">
@@ -85,7 +85,7 @@
 
 					// let's just simulate something...
 					var messageEl = theForm.querySelector( '.final-message' );
-					messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+					//messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
 					classie.addClass( messageEl, 'show' );
 				}
 			} );
