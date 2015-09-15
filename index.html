@@ -14,11 +14,12 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
 	</head>
-	<body>
+	<body ng-app="grita-con-creepypastas" ng-controller="nlform-controller">
 		<div class="container">
 			<!-- Top Navigation -->
 			<div class="codrops-top clearfix">
 				<a class="codrops-icon codrops-icon-prev" href="http://creepypastas.com"><span>Creepypastas.com</span></a>
+				<span id="online-count"><b>{{game.peopleOnline}}</b> en línea. {{game.registredusers}} usuarios participando</span>
 				<span class="right"><a class="codrops-icon codrops-icon-drop" href="https://www.facebook.com/Creepypastas"><span>Creepypastas en facebook</span></a></span>
 			</div>
 			<header class="codrops-header">
@@ -30,19 +31,19 @@
 						<ol class="questions">
 							<li>
 								<span><label for="q2">¿Cuál es tu nombre?</label></span>
-								<input id="q2" name="q2" type="text"/>
+								<input id="q2" name="q2" type="text" ng-model="form.user.name"/>
 							</li>
 							<li>
 								<span><label for="q1">¿Cuál es tu email?</label></span>
-								<input id="q1" name="q1" type="email"/>
+								<input id="q1" name="q1" type="email" ng-model="form.user.email"/>
 							</li>
 							<li>
 								<span><label for="q3">¿Cuál es tu creepypasta favorita?</label></span>
-								<input id="q3" name="q3" type="text"/>
+								<input id="q3" name="q3" type="text" ng-model="form.user.bestCreepypasta"/>
 							</li>
 							<li>
 								<span><label for="q6">¿En qué país vives?</label></span>
-								<input id="q6" name="q6" type="text"/>
+								<input id="q6" name="q6" type="text" ng-model="form.user.country"/>
 							</li>
 						</ol><!-- /questions -->
 						<button class="submit" type="submit">Participar</button>
