@@ -72,8 +72,12 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 			$scope.game.msgforuser = '¡Gracias por participar! Anunciaremos al ganador de los boletos el 17 de septiembre, al rededor del mediodia';
 			$scope.game.registredusers = data.registredusers;
 		}
-		else
-			$scope.game.msgforuser = 'Por favor pon tu nombre sin espacios, ejemplo: AlexisTuertoDegollado. Corregiremos esto por la madrugada';
+		else if( data.errorCode == 1403){
+			$scope.game.msgforuser = 'Hubo un problema con tu nombre, por favor revísalo y envía nuevamente tus datos. :)';
+		}else if ( data.errorCode == 1503) {
+			$scope.game.msgforuser = 'Al parecer el email que ingresaste es inválido, por favor revísalo y envía nuevamente tus datos. :)';						
+		}
+
   });
 
   $scope.send = function(){
