@@ -42,7 +42,7 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 
 	$scope.game = {
 		msgforuser:'',
-		registredusers:0,
+		registredusers:27,
 		peopleOnline:2
 	};
 
@@ -58,6 +58,7 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
   socket.on('user::arrives', function(data) {
     console.log(data);
 		$scope.game.peopleOnline = data.peopleOnline;
+		$scope.game.registredusers = data.registredusers;
   });
 
 	socket.on('user::left', function(data) {
