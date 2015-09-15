@@ -75,7 +75,10 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 			$scope.game.msgforuser = 'Hubo un problema con tu nombre, por favor revísalo y envía nuevamente tus datos. :)';
 		}else if ( data.errorCode == 1503) {
 			$scope.game.msgforuser = 'Al parecer el email que ingresaste es inválido, por favor revísalo y envía nuevamente tus datos. :)';
+		}else if ( data.errorCode == 1603) {
+			$scope.game.msgforuser = '¡Ups! No recibimos tu email. ¿Te aseguraste de escribirlo?';
 		}
+
 		if(data.registredusers){
 			$scope.game.registredusers = data.registredusers;
 		}
