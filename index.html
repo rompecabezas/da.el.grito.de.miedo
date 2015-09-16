@@ -46,7 +46,7 @@
 								<input id="q6" name="q6" type="text" ng-model="form.user.country"/>
 							</li>
 						</ol><!-- /questions -->
-						<button class="submit" type="submit" ng-click="send()">Participar</button>
+						<button class="submit" type="submit">Participar</button>
 						<div class="controls">
 							<button class="next"></button>
 							<div class="progress"></div>
@@ -57,7 +57,7 @@
 							<span class="error-message"></span>
 						</div><!-- / controls -->
 					</div><!-- /simform-inner -->
-					<div  class="final-message">
+					<div class="final-message" ng-click="send()" >
 						<span ng-if="game.msgforuser == ''" >Estamos envíando tus datos...</span>
 						<span ng-if="game.msgforuser != ''" >{{game.msgforuser}}</span>
 					</div>
@@ -98,6 +98,7 @@
 					var messageEl = theForm.querySelector( '.final-message' );
 					//messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
 					classie.addClass( messageEl, 'show' );
+					angular.element(messageEl).triggerHandler('click');
 				}
 			} );
 		</script>
