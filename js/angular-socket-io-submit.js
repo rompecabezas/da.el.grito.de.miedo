@@ -77,6 +77,8 @@ angular.module('grita-con-creepypastas').controller('nlform-controller', ['$scop
 			$scope.game.msgforuser = 'Al parecer el email que ingresaste es inválido, por favor revísalo y envía nuevamente tus datos. :)';
 		}else if ( data.errorCode == 1603) {
 			$scope.game.msgforuser = '¡Ups! No recibimos tu email. ¿Te aseguraste de escribirlo?';
+		}else if ( data.errorCode == 1999) {
+			$scope.game.msgforuser = '¡Ups! La dinámica terminó el 17-sept-2015 a las 15:00 (hora de México). En breve anunciaremos al ganador.';
 		}
 
 		if(data.registredusers){
